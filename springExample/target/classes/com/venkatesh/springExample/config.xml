@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+<context:component-scan base-package="com.venkatesh.springExample"></context:component-scan>
+	
+	
+	<bean id="address" class="com.venkatesh.springExample.Address">
+	<property name="street" value="sri vaari temple deggra "></property>
+	<property name="village" value="kalavalla"></property>
+	</bean>
+	
+	
+	<bean id="student" class="com.venkatesh.springExample.Student">
+	<property name="id" value="2"></property>
+	<property name="name" value="hema"></property>
+	<property name="ad" ref="address"></property>
+	<property name="details">
+	<list>
+	<value>course</value>
+	<value>sec</value>
+	<value>subjs</value>
+	</list>
+	</property>
+	
+	<property name="subs">
+	<map>
+	<entry key="sub" value="eng"></entry>
+	</map>
+	</property>
+	
+	</bean>
+</beans>

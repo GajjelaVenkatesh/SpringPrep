@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="com.venkatesh.collections.Emp" name="emp1">
+		<property name="name" value="Venky" />
+		<property name="phones">
+			<list>
+				<value>123123123123</value>
+				<value>123123123</value>
+				<value>123123123123</value>
+				<value>123123124124</value>
+			</list>
+		</property>
+		<property name="addresses">
+			<set>
+				<value>vijayawada</value>
+				<value>Hyderabad</value>
+				<value>Ongole</value>
+				<value>Chennai</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="java" value="secondMonth"></entry>
+				<entry key="cpp" value="thirdMonth"></entry>
+				<entry key="c" value="firstMonth"></entry>
+			</map>
+		</property>
+
+	</bean>
+</beans>

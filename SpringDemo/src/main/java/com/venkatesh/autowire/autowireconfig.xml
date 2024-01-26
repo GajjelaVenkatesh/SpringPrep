@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config></context:annotation-config>
+	<bean class="com.venkatesh.autowire.Address" >
+		<property name="street">
+			<value>Nandigama</value>
+		</property>
+	</bean>
+
+
+	<bean class="com.venkatesh.autowire.Emp" name="emp"
+
+		autowire="byType"></bean>
+	<!--<bean class="com.venkatesh.autowire.Emp" name="emp"></bean> -->
+
+</beans>
+
+<!-- By name will check the bean name of class adreess and if we autowire 
+	with type it will check the class type which will match with the field name 
+	of address and clas -->
